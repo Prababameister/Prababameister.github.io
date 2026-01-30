@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors from Geishas in a Landscape */
+  --primary-color: #c73838; /* Rich red from the artwork */
+  --secondary-color: #2c6b6f; /* Teal/green from landscape */
+  --accent-red: #d84848;
+  --accent-teal: #458a8e;
+  --text-color: #2d2420; /* Dark brown from artwork */
+  --bg-color: #f5ede4; /* Cream/beige paper color */
+  --card-bg: #fefbf6; /* Light cream */
+  --border-color: #d4c4b0; /* Warm tan border */
+  --soft-green: #8faa88; /* Soft green from foliage */
+  --gold-accent: #c9a961; /* Gold/tan accents */
+}
+
+body {
+  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 49px,
+      rgba(212, 196, 176, 0.1) 49px,
+      rgba(212, 196, 176, 0.1) 50px
+    );
+}
+
+#app {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', serif;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-red);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Japanese-inspired decorative elements */
+.decorative-border {
+  border: 2px solid var(--border-color);
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--primary-color) 10px,
+    var(--secondary-color) 10px,
+    var(--secondary-color) 20px
+  ) 1;
+}
+
+.wave-divider {
+  height: 4px;
+  background: 
+    radial-gradient(circle at 50% -10%, transparent 8px, var(--primary-color) 8px, var(--primary-color) 10px, transparent 10px),
+    radial-gradient(circle at 0% -10%, transparent 8px, var(--primary-color) 8px, var(--primary-color) 10px, transparent 10px),
+    radial-gradient(circle at 100% -10%, transparent 8px, var(--primary-color) 8px, var(--primary-color) 10px, transparent 10px);
+  background-size: 40px 20px;
+  background-position: 0 0, 20px 0, 40px 0;
+  background-repeat: repeat-x;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
